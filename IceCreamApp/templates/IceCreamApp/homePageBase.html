@@ -1,0 +1,13 @@
+{% load static %}
+<html>
+    <head>
+        <h1>Homepage</h1>
+        <a href="{% url 'homePage' %}">Home</a> |
+        <a href="{% url 'tubs' %}">List of Tubs</a> |
+        <a href="{% url 'stores' %}">List of Stores</a> 
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
