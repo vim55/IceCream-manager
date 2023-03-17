@@ -1,9 +1,18 @@
 {% extends 'IceCreamApp/homePageBase.html' %}
 {% block content %}
 <div class="container">
-    <dl>
-        <dt>Lsit of Tubs</dt>
-            <dd>{{ tubs.flavour }}</dd>
-    </dl>
+    <table style="width:200px">
+        <caption><b>List of Tubs</b></caption>
+        <tr>
+            <th>Tub Flavour</th>
+            <th>Assigned Store</th>
+        </tr>
+        {% for t in tubs %}
+        <tr>
+            <td>{{ t.flavour }}</td>
+            <td>{{ t.store.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </div>
 {% endblock %}

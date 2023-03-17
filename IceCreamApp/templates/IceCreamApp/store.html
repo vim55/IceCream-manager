@@ -1,9 +1,33 @@
 {% extends 'IceCreamApp/homePageBase.html' %}
 {% block content %}
 <div class="container">
-    <dl>
-        <dt>Store</dt>
-            <dd>{{ stores.name }}</dd>
-    </dl>
+    <table style="width:200px">
+        <caption><b>This Store</b></caption>
+        <tr>
+            <th>Store Name</th>
+            <th>ID</th>
+        </tr>
+
+        <tr>
+            <td>{{ store.name }}</td>
+            <td>{{ store.id }}</td>
+        </tr>
+
+    </table>
+</div>
+
+<div class="container">
+    <table style="width:200px">
+        <caption><b>Tubs Available</b></caption>
+        <tr>
+            <th>Tub</th>
+            <th>ID</th>
+        </tr>
+
+        <tr>
+            <td>{{ store.name }}</td>
+            <td>{{ store.id }}</td>
+        </tr>
+    </table>
 </div>
 {% endblock %}

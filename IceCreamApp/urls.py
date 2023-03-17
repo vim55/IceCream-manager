@@ -5,5 +5,5 @@ urlpatterns = [
     path("", homePage, name="homePage"),
     path("tubs/", listOfTubs, name="tubs"),
     path("stores/", listOfStores, name="stores"),
-    path("store/", viewSingleStore, name="store"),
+    path("stores/<store_id>", viewSingleStore, name="store"),
 ]
