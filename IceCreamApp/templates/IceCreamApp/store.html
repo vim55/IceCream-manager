@@ -4,13 +4,17 @@
     <table style="width:200px">
         <caption><b>This Store</b></caption>
         <tr>
-            <th>Store Name</th>
             <th>ID</th>
+            <th>Store Name</th>
+            <th>Location</th>
+            <th>Contact</th>
         </tr>
 
         <tr>
-            <td>{{ store.name }}</td>
             <td>{{ store.id }}</td>
+            <td>{{ store.name }}</td>
+            <td>{{ store.location }}</td>
+            <td>{{ store.contact_email }}</td>
         </tr>
 
     </table>
@@ -20,15 +24,22 @@
     <table style="width:200px">
         <caption><b>Tubs Available</b></caption>
         <tr>
-            <th>Tub</th>
-            <th>ID</th>
+            <th>Tub Flavour</th>
+            <th>Size</th>
+            <th>isVegan</th>
+            <th>isGluten Free</th>
+            <th>Assigned Store</th>
         </tr>
         {% for t in storeTubs %}
         <tr>
             <td>{{ t.flavour }}</td>
-            <td>{{ t.id }}</td>
+            <td>{{ t.size}}</td>
+            <td>{{ t.isVegan }}</td>
+            <td>{{ t.isGlutenFree }}</td>
+            <td>{{ t.store.name }}</td>
         </tr>
         {% endfor %}
     </table>
+    <h4> <br> <br> {{store.name}} has {{totalSize}} litres of ice cream in total.</h4>
 </div>
 {% endblock %}

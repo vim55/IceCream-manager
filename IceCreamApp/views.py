@@ -20,5 +20,8 @@ def viewSingleStore(request, store_id):
     #stores = Store.objects.all()
     myStore = get_object_or_404(Store, id = store_id)
     tubobjects = Tub.objects.filter(store = myStore)
+    tot_size = 0
+    for i in tubobjects:
+        tot_size += i.size
 
-    return render(request, "IceCreamApp/store.html", {"store": myStore, "storeTubs" : tubobjects}) 
+    return render(request, "IceCreamApp/store.html", {"store": myStore, "storeTubs" : tubobjects, "totalSize" : tot_size}) 

@@ -5,11 +5,17 @@
         <caption><b>List of Tubs</b></caption>
         <tr>
             <th>Tub Flavour</th>
+            <th>Size</th>
+            <th>isVegan</th>
+            <th>isGluten Free</th>
             <th>Assigned Store</th>
         </tr>
         {% for t in tubs %}
         <tr>
             <td>{{ t.flavour }}</td>
+            <td>{{ t.size}}</td>
+            <td>{{ t.isVegan }}</td>
+            <td>{{ t.isGlutenFree }}</td>
             <td>{{ t.store.name }}</td>
         </tr>
         {% endfor %}
