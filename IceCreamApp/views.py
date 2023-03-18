@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 from .models import Store, Tub
@@ -18,8 +18,7 @@ def listOfStores(request):
 
 def viewSingleStore(request, store_id):
     #stores = Store.objects.all()
-    store = Store.objects.get(id = store_id)
-    print(store)
-    #return render(request, "IceCreamApp/store.html", {"store": stores}) 
-    #return HttpResponse(store_id)
-    return render(request, "IceCreamApp/store.html", {"store": store}) 
+    myStore = get_object_or_404(Store, id = store_id)
+    tubobjects = Tub.objects.filter(store = myStore)
+
+    return render(request, "IceCreamApp/store.html", {"store": myStore, "storeTubs" : tubobjects}) 

@@ -9,7 +9,7 @@
         </tr>
         {% for s in stores %}
         <tr>
-            <td><a href="#">{{ s.name }}</a></td>
+            <td><a href={{s.id}}>{{ s.name }}</a></td>
             <td>{{ s.id }}</td>
         </tr>
         {% endfor %}

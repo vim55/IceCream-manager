@@ -23,11 +23,12 @@
             <th>Tub</th>
             <th>ID</th>
         </tr>
-
+        {% for t in storeTubs %}
         <tr>
-            <td>{{ store.name }}</td>
-            <td>{{ store.id }}</td>
+            <td>{{ t.flavour }}</td>
+            <td>{{ t.id }}</td>
         </tr>
+        {% endfor %}
     </table>
 </div>
 {% endblock %}
