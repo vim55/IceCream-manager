@@ -5,10 +5,14 @@ from .models import Store, Tub
 # def make_published(modeladmin, request, queryset):
 #     queryset.update(tag = 'p')
     
+class StoreAdmin(admin.ModelAdmin):
+    list_display = ['name', 'location', 'contact_email']
+    ordering = ['name']
+    
 class TubAdmin(admin.ModelAdmin):
     list_display = ['flavour', 'size', 'store']
-    ordering = ['ID']
-    #actions = [make_published]
+    ordering = ['flavour']
 
-admin.site.register(Store)
-admin.site.register(Tub)
+
+admin.site.register(Store, StoreAdmin)
+admin.site.register(Tub, TubAdmin)

@@ -2,22 +2,19 @@
 {% load static %}
 <html>
     <head>
-        <style>
-            caption { 
-              display: table-caption;
-              text-align: center;
-            }
-        </style>
-        <h1> IceCream Company </h1>
-        <h2> Welcome! </h2>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <a href="{% url 'homePage' %}">Home</a> |
-        <a href="{% url 'tubs' %}">List of Tubs</a> |
-        <a href="{% url 'stores' %}">List of Stores</a> 
+        <link rel="stylesheet" href="{% static 'IceCreamApp/style.css' %}">
     </head>
     <body>
+        <h1> IceCream Company </h1>
+        <h2> Welcome! </h2>
+        
+        <a href="{% url 'homePage' %}">Home</a> |
+        <a href="{% url 'tubs' %}">List of Tubs</a> |
+        <a href="{% url 'stores' %}">List of Stores </a> 
+        <img src="{% static 'IceCreamApp/icecream.png' %}" alt="ice cream" width="42" height="51">
         {% block content %}
+            <p> Please click above options </p>
+            <img src="{% static 'IceCreamApp/home.jpg' %}" alt="ice cream" width="500" height="500">
         {% endblock %}
     </body>
 </html>
