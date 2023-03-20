@@ -9,7 +9,7 @@ def homePage(request):
 
 def listOfTubs(request):
     tubs = Tub.objects.all()
-    return render(request, "IceCreamApp/listOFTubs.html", {"tubs": tubs})
+    return render(request, "IceCreamApp/listOfTubs.html", {"tubs": tubs})
 
 def listOfStores(request):
     stores = Store.objects.all()
