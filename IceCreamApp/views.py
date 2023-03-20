@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.views.generic import TemplateView
 from .models import Store, Tub
 
 # Create your views here.
@@ -10,7 +9,7 @@ def homePage(request):
 
 def listOfTubs(request):
     tubs = Tub.objects.all()
-    return render(request, "IceCreamApp/listOFTubs.html", {"tubs": tubs}) 
+    return render(request, "IceCreamApp/listOFTubs.html", {"tubs": tubs})
 
 def listOfStores(request):
     stores = Store.objects.all()
