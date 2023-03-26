@@ -20,7 +20,7 @@ def validate_interval(value):
     
 class Tub(models.Model):
     # null info is not allowed
-    flavour = models.CharField(max_length=30) # maximum length set to 60
+    flavour = models.CharField(max_length=30) # maximum length set to 30
     size = models.FloatField(validators=[validate_interval]) # set to float for litres
     isVegan = models.BooleanField(default = False) # Default is False
     isGlutenFree = models.BooleanField(default = False) # Default is False
