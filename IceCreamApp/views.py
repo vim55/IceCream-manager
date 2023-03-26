@@ -16,10 +16,9 @@ def listOfStores(request):
     return render(request, "IceCreamApp/listOFStores.html", {"stores": stores}) 
 
 def viewSingleStore(request, store_id):
-    #stores = Store.objects.all()
-    myStore = get_object_or_404(Store, id = store_id)
-    tubobjects = Tub.objects.filter(store = myStore)
-    tot_size = 0
+    myStore = get_object_or_404(Store, id = store_id) # get single store by id
+    tubobjects = Tub.objects.filter(store = myStore) # get store tubs
+    tot_size = 0 # get total tub size
     for i in tubobjects:
         tot_size += i.size
 
