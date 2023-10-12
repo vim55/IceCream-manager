@@ -1,4 +1,4 @@
-To run this application in Curtin mydestop VM:
+To run this application:
 
 Need to install Django requirement:
   pip3 install Django
