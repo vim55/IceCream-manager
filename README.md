@@ -4,10 +4,10 @@ Display all icecream stores
 ![IceCream](./images/icecream_app.png)
 
 Display store information
-![IceCreamStores](./images/icecream_store.png)
+![IceCreamStores](./images/ice store.png)
 
 Display all icecream tubs
-![IceCreamTubs](./images/icecream_tubs.png)
+![IceCreamTubs](./images/ice_tubs.png)
 
 ## IceCream
 
