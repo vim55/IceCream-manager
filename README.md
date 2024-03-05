@@ -1,18 +1,16 @@
 # IceCream Manager Programs
 
-Display all icecream stores
-![IceCream](./images/icecream_app.png)
-
-Display store information
-![IceCreamStores](./images/ice store.png)
-
-Display all icecream tubs
-![IceCreamTubs](./images/ice_tubs.png)
-
-## IceCream
-
 **Description:**
 The IceCream Manager Programs provide an interface for admin users to efficiently manage their ice cream store and associated ice tubs.
+
+Display all icecream stores
+    ![IceCream](./images/icecream_app.png)
+
+Display store information
+    ![IceCreamStores](./images/ice store.png)
+
+Display all icecream tubs
+    ![IceCreamTubs](./images/ice_tubs.png)
 
 ### How to Run the Application:
 
