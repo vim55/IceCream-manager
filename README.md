@@ -1,3 +1,9 @@
+# IceCream Manager Programs
+
+![Icecream](./images/icecream app.png)
+
+## IceCream
+
 To run this application:
 
 Need to install Django requirement:
